@@ -1,0 +1,1 @@
+<?php$page = $_GET['page'] ?: 'first';$page = 'php/pages/'.$page.'.php';if (!file_exists($page)){    throw new Exception('page not found');} $page= file_get_contents($page); $footer= file_get_contents('php/templates/footer.php'); $page = str_replace('<footerUser></footerUser>',$footer,$page ); die($page);var_dump($_GET);die();

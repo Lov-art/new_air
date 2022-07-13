@@ -1,0 +1,1 @@
+<?phpif ($_POST['form_name'] === 'send_mail'){    require_once 'send_mail.php';    $response = sendMail($_POST);    die(json_encode($response));}
